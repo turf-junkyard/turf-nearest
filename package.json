@@ -24,5 +24,8 @@
   "homepage": "https://github.com/morganherlocker/turf-nearest",
   "devDependencies": {
     "tape": "^2.12.2"
+  },
+  "dependencies": {
+    "distance": "^1.0.0"
   }
 }
