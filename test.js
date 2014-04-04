@@ -10,5 +10,7 @@ test('distance', function(t){
 
   t.ok(closestPt, 'should return a point')
   t.equal(closestPt.geometry.type, 'Point', 'should be a point')
+  t.equal(closestPt.geometry.coordinates[0], -75.33, 'lon -75.33')
+  t.equal(closestPt.geometry.coordinates[1], 39.44, 'lat 39.44')
   t.end()
 })

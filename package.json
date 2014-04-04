@@ -26,6 +26,6 @@
     "tape": "^2.12.2"
   },
   "dependencies": {
-    "distance": "^1.0.0"
+    "turf-distance": "^0.1.1"
   }
 }
