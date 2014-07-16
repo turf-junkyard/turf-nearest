@@ -2,6 +2,29 @@ turf-nearest
 ============
 [![Build Status](https://travis-ci.org/Turfjs/turf-nearest.svg)](https://travis-ci.org/Turfjs/turf-nearest)
 
+Checks to see if a point is inside of a polygon. The polygon can be convex or concave.
+
+###Install
+
+```sh
+npm install turf-nearest
+```
+
+###Parameters
+
+|name|description|
+|---|---|
+|inPoint|a Point Features|
+|inFeatures|a FeatureCollection|
+
+###Usage
+
+```js
+nearest(inPoint, inFeatures)
+```
+
+###Example
+
 Returns the nearest point feature.
 
 ```js
