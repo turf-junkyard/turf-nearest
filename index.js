@@ -2,8 +2,6 @@ distance = require('turf-distance')
 
 module.exports = function(targetPoint, points){
   var nearestPoint
-  var count = 0
-  var dist = Infinity
   points.features.forEach(function(pt){
     if(!nearestPoint){
       nearestPoint = pt
