@@ -1,5 +1,14 @@
 distance = require('turf-distance');
 
+/**
+ * Returns the {@link Point} feature closest to the input.
+ *
+ * @module turf/nearest
+ * @param {Point} point the reference point
+ * @param {FeatureCollection} against a collection of {@link Feature|features}
+ * with {@link Point} geometries
+ * @returns {Feature} the closest point feature to point
+ */
 module.exports = function(targetPoint, points){
   var nearestPoint;
   var count = 0;
