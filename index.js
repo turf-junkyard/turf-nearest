@@ -1,4 +1,4 @@
-distance = require('turf-distance');
+var distance = require('turf-distance');
 
 /**
  * Returns the {@link Point} feature closest to the input.
