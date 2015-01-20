@@ -1,7 +1,7 @@
 var distance = require('turf-distance');
 
 /**
- * Returns the {@link Point} feature closest to the input.
+ * Takes a {@link Point} feature and a {@link FeatureCollection} of Point features and returns the Point feature from the FeatureCollection closest to the input point.
  *
  * @module turf/nearest
  * @param {Point} point the reference point
