@@ -8,7 +8,7 @@ var distance = require('turf-distance');
  * @param {FeatureCollection} against a FeatureCollection of Point features
  * @return {Feature} the closest Point feature in `against` to `point`
  * @example
- * var point = turf.point(28.965797, 41.010086);
+ * var point = turf.point([28.965797, 41.010086]);
  * point.properties['marker-color'] = '#0f0';
  * var against = turf.featurecollection([
  *  turf.point([28.973865, 41.011122]),
