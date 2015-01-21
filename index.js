@@ -11,9 +11,9 @@ var distance = require('turf-distance');
  * var point = turf.point(28.965797, 41.010086);
  * point.properties['marker-color'] = '#0f0';
  * var against = turf.featurecollection([
- *  turf.point(28.973865, 41.011122),
- *  turf.point(28.948459, 41.024204),
- *  turf.point(28.938674, 41.013324)
+ *  turf.point([28.973865, 41.011122]),
+ *  turf.point([28.948459, 41.024204]),
+ *  turf.point([28.938674, 41.013324])
  * ]);
  *
  * var nearest = turf.nearest(point, against);
