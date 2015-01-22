@@ -1,42 +1,54 @@
-turf-nearest
-============
-[![Build Status](https://travis-ci.org/Turfjs/turf-nearest.svg)](https://travis-ci.org/Turfjs/turf-nearest)
+# turf-nearest
 
-Returns the nearest point feature.
+[![build status](https://secure.travis-ci.org/Turfjs/turf-nearest.png)](http://travis-ci.org/Turfjs/turf-nearest)
 
-###Install
+turf nearest module
+
+
+### `turf.nearest(point, against)`
+
+Takes a Point feature and a FeatureCollection of Point features and returns the Point feature from the FeatureCollection closest to the input point.
+
+
+### Parameters
+
+| parameter | type              | description                           |
+| --------- | ----------------- | ------------------------------------- |
+| `point`   | Point             | the reference point                   |
+| `against` | FeatureCollection | a FeatureCollection of Point features |
+
+
+### Example
+
+```js
+var point = turf.point([28.965797, 41.010086]);
+point.properties['marker-color'] = '#0f0';
+var against = turf.featurecollection([
+ turf.point([28.973865, 41.011122]),
+ turf.point([28.948459, 41.024204]),
+ turf.point([28.938674, 41.013324])
+]);
+
+var nearest = turf.nearest(point, against);
+nearest.properties['marker-color'] = '#f00';
+
+var result = turf.featurecollection(
+  against.features.concat(point));
+
+//=result
+```
+
+## Installation
+
+Requires [nodejs](http://nodejs.org/).
 
 ```sh
-npm install turf-nearest
+$ npm install turf-nearest
 ```
 
-###Parameters
+## Tests
 
-|name|description|
-|---|---|
-|inPoint|a Point Features|
-|inFeatures|a FeatureCollection|
-
-###Usage
-
-```js
-nearest(inPoint, inFeatures)
+```sh
+$ npm test
 ```
 
-###Example
-
-```js
-var nearest = require('turf-nearest')
-var point = require('turf-point')
-var featurecollection = require('turf-featurecollection')
-
-var inPoint = point(-75.4, 39.4, {name: 'Location A'})
-var pt1 = point(-75.343, 39.984, {name: 'Location B'})
-var pt2 = point(-75.833, 39.284, {name: 'Location C'})
-var pt3 = point(-75.534, 39.123, {name: 'Location D'})
-var inFeatures = featurecollection([pt1, pt2, pt3])
-
-var closestPoint = nearest(inPoint, inFeatures)
-
-console.log(closestPoint)
-```
