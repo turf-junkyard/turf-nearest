@@ -1,7 +1,7 @@
 var distance = require('turf-distance');
 
 /**
- * Takes a reference point and a set of points and returns the point from the set closest to the reference.
+ * Takes a reference {@link Point|point} and a set of points and returns the point from the set closest to the reference.
  *
  * @module turf/nearest
  * @category classification
