@@ -1,13 +1,13 @@
 var distance = require('turf-distance');
 
 /**
- * Takes a {@link Point} feature and a {@link FeatureCollection} of Point features and returns the Point feature from the FeatureCollection closest to the input point.
+ * Takes a reference point and a set of points and returns the point from the set closest to the reference.
  *
  * @module turf/nearest
  * @category classification
- * @param {Point} point the reference point
- * @param {FeatureCollection} against a FeatureCollection of Point features
- * @return {Feature} the closest Point feature in `against` to `point`
+ * @param {Feature<Point>} point the reference point
+ * @param {FeatureCollection<Point>} against input point set
+ * @return {Feature<Point>} the closest point in the set to the reference point
  * @example
  * var point = {
  *   "type": "Feature",
